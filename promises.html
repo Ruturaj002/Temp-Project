@@ -1,0 +1,9 @@
+<script>
+    var record = new Promise((res, rej) => {
+        console.log(typeof res, typeof rej);
+        res("Task is completed")
+        //rej("Task is Incompleted")
+    })
+    console.log(record);
+    record.then((value) => { console.log(value) }).catch((error)=>{console.log(error);}).finally(()=>{console.log("proceed for next task");})//then is handler is used handle resolve value and catch is for reject value         
+</script>
